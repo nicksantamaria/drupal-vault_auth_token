@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains Drupal\vault_auth_token\Plugin\VaultAuth\Token.
- */
-
 namespace Drupal\vault_auth_token\Plugin\VaultAuth;
 
 use Drupal\Core\Form\FormStateInterface;
@@ -26,8 +21,9 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class Token extends VaultAuthBase implements ContainerFactoryPluginInterface, VaultPluginFormInterface {
 
   /**
-   * @var string $token
-   *  The token used to authenticate against Vault.
+   * The token used to authenticate against Vault.
+   *
+   * @var string
    */
   protected $token;
 
@@ -35,6 +31,7 @@ class Token extends VaultAuthBase implements ContainerFactoryPluginInterface, Va
    * Sets $token property.
    *
    * @var string $token
+   *
    * @return self
    *   Current object.
    */
@@ -47,6 +44,7 @@ class Token extends VaultAuthBase implements ContainerFactoryPluginInterface, Va
    * Gets $token property.
    *
    * @return string
+   *   Authentication token.
    */
   public function getToken() {
     return $this->token;
